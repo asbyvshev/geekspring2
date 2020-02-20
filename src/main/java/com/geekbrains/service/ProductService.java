@@ -18,4 +18,7 @@ public class ProductService {
         Product product = productRepository.findOneById(id);
         return product;
     }
+    public void addProduct (int id, String title, double cost){
+        productRepository.addProduct(id,title,cost);
+    }
 }
