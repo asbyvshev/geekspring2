@@ -18,6 +18,12 @@ public class ProductController {
         this.productService = productService;
     }
 
+    @RequestMapping("/products")
+    public String showProducts(Model uiModel) {
+        uiModel.addAttribute("products",productService.getProducts());
+        return "product-all";
+    }
+
     @RequestMapping("/newProduct")
     public String showSimpleForm(Model uiModel) {
         Product product = new Product();
