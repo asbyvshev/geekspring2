@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 @Component
@@ -13,8 +14,14 @@ public class ProductRepository {
     private List<Product> productList = new ArrayList<Product>();
 
     public Product findOneById(int id) {
-        Product product = productList.get(id);
-        return product;
+        Product product;
+        for (Product p:productList) {
+            if (id == p.getId()){
+                product = productList.get(p.getId());
+                return product;
+            }
+        }
+        return null;
     }
 
     public void addProduct (int id, String title, double cost){
