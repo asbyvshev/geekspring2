@@ -29,4 +29,13 @@ public class Product {
     public void setCost(double cost) {
         this.cost = cost;
     }
+
+    public Product() {
+    }
+
+    public Product(int id, String title, double cost) {
+        this.id = id;
+        this.title = title;
+        this.cost = cost;
+    }
 }
