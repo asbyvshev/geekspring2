@@ -36,4 +36,5 @@ public class ProductController {
         productService.addProduct(product.getId(),product.getTitle(),product.getCost());
         return "product-form-result";
     }
+
 }
