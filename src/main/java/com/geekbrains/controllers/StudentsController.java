@@ -53,7 +53,8 @@ public class StudentsController {
     }
 
     @RequestMapping("/processForm")
-    public String processForm(@ModelAttribute("student") Student student) {
+    public String processForm(Model uiModel,@ModelAttribute("student") Student student) {
+
         return "student-form-result";
     }
 
