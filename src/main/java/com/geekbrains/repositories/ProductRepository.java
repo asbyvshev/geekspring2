@@ -13,6 +13,13 @@ public class ProductRepository {
 
     private List<Product> productList = new ArrayList<Product>();
 
+    public ProductRepository() {
+        productList.add(new Product(1,"Apple",1.2));
+        productList.add(new Product(2,"Orange",2.2));
+        productList.add(new Product(3,"Banana",3.2));
+        productList.add(new Product(4,"Strawberry",4.2));
+    }
+
     public Product findOneById(int id) {
         Product product;
         for (Product p:productList) {
@@ -31,4 +38,9 @@ public class ProductRepository {
         product.setCost(cost);
         productList.add(product);
     }
+
+    public List<Product> getProductList() {
+        return productList;
+    }
 }
+
